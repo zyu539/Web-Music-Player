@@ -1,32 +1,16 @@
-package com.example.player.web.model;
+package com.example.player.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @Entity
-@EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = {"createdAt"}, 
-allowGetters = true)
 public class Song implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1911122747056537903L;
 	
 	@Id
@@ -41,11 +25,6 @@ public class Song implements Serializable{
 	private String releaseYear;
 	
 	private String album;
-	
-	@Column(nullable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreatedDate
-    private Date createdAt;
 
 	public Long getId() {
 		return id;
@@ -86,14 +65,5 @@ public class Song implements Serializable{
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-	
 	
 }

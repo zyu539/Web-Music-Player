@@ -1,4 +1,4 @@
-package com.example.player.web.controller;
+package com.example.player.controller;
 
 import java.util.List;
 
@@ -17,12 +17,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.player.constants.GeneralConstants;
-import com.example.player.web.exceptions.ResourceNotFoundException;
-import com.example.player.web.repository.SongRepository;
-import com.example.player.web.model.Song;
+import com.example.player.exceptions.ResourceNotFoundException;
+import com.example.player.model.Song;
+import com.example.player.repository.SongRepository;
 
 @Controller
-@SessionAttributes(GeneralConstants.ID_SESSION_ACCOUNT)
 public class PlayerController {
 	
 	@Autowired
