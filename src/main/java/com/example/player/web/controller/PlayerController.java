@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.player.constants.GeneralConstants;
-import com.example.player.exceptions.ResourceNotFoundException;
-import com.example.player.repository.SongRepository;
+import com.example.player.web.exceptions.ResourceNotFoundException;
+import com.example.player.web.repository.SongRepository;
 import com.example.player.web.model.Song;
 
 @Controller

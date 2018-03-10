@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.example.player.repository.UserRepository;
+import com.example.player.web.repository.UserRepository;
 import com.example.player.web.model.User;
 
 public class UserController {
