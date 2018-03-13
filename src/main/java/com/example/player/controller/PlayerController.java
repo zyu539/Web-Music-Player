@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.example.player.constants.GeneralConstants;
 import com.example.player.exceptions.ResourceNotFoundException;
 import com.example.player.model.Song;
 import com.example.player.repository.SongRepository;
@@ -26,8 +24,14 @@ public class PlayerController {
 	
 	@Autowired
     SongRepository songRepository;
+	
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
 
 	@PostMapping("/songs/save")
+	@ResponseBody
 	public Song saveSong(@Valid @RequestBody Song song) {
 	    return songRepository.save(song);
 	}
@@ -51,12 +55,5 @@ public class PlayerController {
 	    songRepository.delete(note);
 
 	    return ResponseEntity.ok().build();
-	}
-	
-	
-	@GetMapping("/")
-	@ResponseBody
-	public String name(@RequestParam(name="username", required=false, defaultValue="ZY God") String name) {
-		return "Hello " + name;
 	}
 }
