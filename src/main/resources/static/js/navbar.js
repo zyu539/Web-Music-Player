@@ -15,7 +15,7 @@ function NavBarComponent() {
             
             <div className="collapse navbar-collapse" id="navbar-collapse-2">
                 <ul className="nav navbar-nav navbar-right">
-                    <li><a href="#">Register</a></li>
+                    <li><a href="/register">Register</a></li>
                     <li><a
                         className="btn btn-default btn-outline btn-circle collapsed"
                         data-toggle="collapse" href="#nav-collapse2" aria-expanded="false"

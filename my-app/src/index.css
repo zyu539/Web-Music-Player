@@ -1,0 +1,33 @@
+body{
+    text-align:center;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.search-bar {
+    margin: 0 auto;
+}
+
+input[type=text] {
+    padding: 6px;
+    width: 35%;
+    margin-top: 8px;
+    font-size: 25px;
+    border-style: solid;
+}
+
+.search-bar button {
+    padding: 7.5px;
+    margin-right: 16px;
+    background: #a3a;
+    width: 10%;
+    font-size: 25px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #ccc;
+}
